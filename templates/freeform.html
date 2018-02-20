@@ -1,0 +1,114 @@
+<html>
+<head>
+<link rel = "stylesheet" type="text/css" href="static/form.css"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header" style="padding-top:20px;padding-bottom:20px; font-size: 17px;">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav" style="padding-top:20px;padding-bottom:20px; font-size: 17px;">
+      <li><a href="#">Home</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Workshop<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="/freeform">FreeWorkshop</a></li>
+          <li><a href="#">UpcomingWorkshop</a></li>
+          <li><a href="#">PaidWorkshop</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Course+Internship</a></li>
+      <li><a href="#">Activity</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <form action="{{ url_for('result') }}" method="post">
+    <div class="row">
+      <div class="col-15">
+        <label for="Colname">College Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="Colname" name="Colname" placeholder="Your College Name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-15">
+        <label for="loc">Location</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="loc" name="loc" placeholder="Your location..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-15">
+        <label for="hod">HOD Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="hod" name="hod" placeholder="Your Hod Name..">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-15">
+        <label for="con">Contact Details</label>
+      </div>
+      <div class="col-75">
+        <input type="tel" id="con" name="con" placeholder="Your contact number..">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-15">
+        <label for="sem">Seminar Date</label>
+      </div>
+      <div class="col-75">
+        <input type="Date" id="date" name="date" placeholder="select date..">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-15">
+        <label for="top">Topic</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="top" name="top" placeholder="Your Topic Name..">
+      </div>
+    </div>
+    
+    
+    <div class="row">
+      <div class="col-15">
+        <label for="expect">Expectation</label>
+      </div>
+      <div class="col-75">
+        <textarea id="expect" name="expect" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div><br>
+    <div class="row" style="float:left;">
+	<div>
+           <input type="submit" value="Submit">
+	</div>
+    </div>
+  </form>
+</div>
+
+<div class="footer">
+<ul>
+  <div>
+	<a href="/">Home</a>
+ 	<a href="#news">www.WorkshopPortal.com</a>
+ 	
+  </div>
+</ul>
+</div>
+
+</body>
+</html>
+

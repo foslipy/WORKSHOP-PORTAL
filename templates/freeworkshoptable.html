@@ -1,0 +1,132 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+
+body {
+    position: relative; 
+}
+
+.footer {
+   
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    
+}
+
+.footer a {
+  float: left;
+  
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  padding-bottom: 16px 
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.footer a:hover {
+  background: #000000;
+  color: white;
+}
+
+.container{
+margin-top: 100px;
+margin-bottom: 100px;
+}
+
+.navbar.container-fluid a:hover{
+background: #008000;
+  color: black;
+}
+
+
+
+
+
+</style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header" style="padding-top:20px;padding-bottom:20px; font-size: 17px;">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav" style="padding-top:20px;padding-bottom:20px; font-size: 17px;">
+      <li><a href="#">Home</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Workshop<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="/freeform">FreeWorkshop</a></li>
+          <li><a href="#">UpcomingWorkshop</a></li>
+          <li><a href="#">PaidWorkshop</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Course+Internship</a></li>
+      <li><a href="#">Activity</a></li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container" align="center"> 
+  <h2>Free Workshop List</h2>
+  <table class="table" align="center" border=1>
+    <thead>
+      <tr>
+	<th>F_ID</th>
+        <th>College Name</th>
+	<th>Location</th>
+        
+        <th>HOD Name</th>
+<th>Contact no.</th>
+<th>Seminar Date</th>
+<th>Topic</th>
+<th>Expectation</th>
+<th>Edit</th>
+<th>Delete</th>
+<th>Update</th>
+      </tr>
+    </thead>
+<tbody>
+{% for row in data %}
+        <tr>
+        {% for d in row %}
+            <td>{{ d }}</td>
+        {% endfor %}
+	<td><a href="/edit">edit</a></td>
+	<td><button>delete</button></td>
+	<td><button>update</button></td>
+        </tr>
+{% endfor %}
+
+
+</tbody>
+  </table>
+</div>	
+
+
+</div>
+<div class="footer">
+<ul>
+  <div>
+	<a href="/">Home</a>
+ 	<a href="#news">www.WorkshopPortal.com</a>
+ 	
+  </div>
+</ul>
+</div>
+
+
+
+</body>
+</html>
+
